@@ -6,8 +6,8 @@ failImmediatelyOnError: true
 env:
   variables:
   vaultVariables:
-    wallet_password: "ocid1.vaultsecret.oc1.us-sanjose-1.amaaaaaayat6pyaasiick3pz4fi3efar6uqeqg74foz64drvhs52t6kjhlja"
-    atp_user_password: "ocid1.vaultsecret.oc1.us-sanjose-1.amaaaaaayat6pyaasngl6rcuigjcwoopwfhisptql42g3z3aoxy33j5voj7a"
+    wallet_password: "ocid1.vaultsecret.oc1.us-sanjose-1.xxx"
+    atp_user_password: "ocid1.vaultsecret.oc1.us-sanjose-1.yyy"
 
 
 steps:
@@ -30,7 +30,6 @@ steps:
       select table_name from all_tables  
       " >script_tmp.sql
       cat script_tmp.sql |envsubst > script.sql
-      cat script.sql
     onFailure:
       - type: Command
         command: |
